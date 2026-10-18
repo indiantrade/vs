@@ -1,165 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> GUJRATI TRADER - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAUTAM JHA | Market Precision & Wealth Insights</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#F59E0B',
+              goldHover: '#D97706',
+              goldLight: '#FEF3C7',
+              navyDark: '#0B1120',
+              navyCard: '#1E293B',
+              navyBorder: '#334155',
+              teleBlue: '#229ED9',
+              teleBlueHover: '#1A7DAA'
+            }
+          },
+          fontFamily: {
+            outfit: ['Outfit', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow': '0 0 25px -5px rgba(245, 158, 11, 0.4)',
+            'teleGlow': '0 0 30px -5px rgba(34, 158, 217, 0.5)',
+          }
+        }
+      }
+    }
+  </script>
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
-
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
-
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
-
-  .feature-item:last-child { border-bottom: none; }
-
-  .icon { margin-right: 12px; font-size: 16px; }
-
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
-
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
-
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
-</style>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B1120;
+      color: #F8FAFC;
+    }
+    .heading-font {
+      font-family: 'Outfit', sans-serif;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gold-gradient-text {
+      background: linear-[#F59E0B, #FCD34D, #F59E0B];
+      background: linear-gradient(135deg, #FFF 10%, #F59E0B 50%, #FCD34D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.02); opacity: 0.95; }
+    }
+    .btn-pulse {
+      animation: pulseGlow 2.5s infinite ease-in-out;
+    }
+  </style>
 </head>
-<body>
+<body class="antialiased text-slate-200 selection:bg-amber-500 selection:text-black">
 
-<div class="card">
-  <img src="https://i.ibb.co/GQYGXHF4/In-Shot-20260927-223648191.jpg" alt=" GUJRATI TRADER" class="profile-img">
+  <!-- Header Section -->
+  <header class="w-full border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="https://iili.io/njmJCss.jpg" alt="GAUTAM JHA Logo" class="w-10 h-10 rounded-full border-2 border-amber-500/50 object-cover">
+        <div>
+          <h1 class="heading-font font-bold text-lg text-white leading-tight">GAUTAM JHA</h1>
+          <p class="text-xs text-amber-400 font-medium tracking-wide">MARKET RESEARCH & ANALYTICS</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2 text-xs font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 px-3 py-1.5 rounded-full">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Community Live</span>
+      </div>
+    </div>
+  </header>
 
-  <h1> GUJRATI TRADER</h1>
+  <!-- Hero Section -->
+  <main class="max-w-4xl mx-auto px-4 pt-6 pb-12">
+    
+    <!-- Top Announcement Badge -->
+    <div class="text-center mb-6">
+      <span class="inline-flex items-center gap-2 text-xs md:text-sm font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/30 px-4 py-1.5 rounded-full">
+        <i class="fa-solid fa-chart-line text-amber-400"></i> Daily Educational Market Insights & Level Analysis
+      </span>
+    </div>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+    <!-- Main Headline -->
+    <div class="text-center space-y-4 mb-8">
+      <h2 class="heading-font text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+        Master Stock Market Precision with <br class="hidden sm:inline">
+        <span class="gold-gradient-text">GAUTAM JHA</span>
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Simplifying Price Action Structure, Nifty/BankNifty Key Levels & Smart Risk Management for Conscious Traders.
+      </p>
+    </div>
+
+    <!-- Profile & Trust Metrics Card -->
+    <div class="glass-card rounded-2xl p-5 sm:p-6 mb-8 text-center relative overflow-hidden">
+      <div class="absolute -right-12 -top-12 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <div class="relative">
+          <img src="https://iili.io/njmJCss.jpg" alt="GAUTAM JHA" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-amber-500/60 shadow-xl object-cover">
+          <span class="absolute bottom-1 right-1 bg-blue-500 text-white p-1 rounded-full text-xs shadow-md" title="Verified Community">
+            <i class="fa-solid fa-check text-xs px-1"></i>
+          </span>
+        </div>
+
+        <div>
+          <h3 class="heading-font text-xl font-bold text-white">GAUTAM JHA</h3>
+          <p class="text-xs text-slate-400">Stock Market Educator & Technical Analyst</p>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-3 gap-3 w-full max-w-md pt-2 border-t border-slate-700/60">
+          <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+            <p class="text-amber-400 font-bold text-base sm:text-lg">Daily</p>
+            <p class="text-[11px] text-slate-400">Pre-Market View</p>
+          </div>
+          <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+            <p class="text-amber-400 font-bold text-base sm:text-lg">100%</p>
+            <p class="text-[11px] text-slate-400">Educational Focus</p>
+          </div>
+          <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+            <p class="text-amber-400 font-bold text-base sm:text-lg">Free</p>
+            <p class="text-[11px] text-slate-400">Telegram Access</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SINGLE TELEGRAM CTA BUTTON (POSITIONED DIRECTLY ABOVE "WHAT YOU'LL LEARN INSIDE") -->
+    <div class="mb-10 text-center">
+      <a href="https://t.me/+DfcpFGckrD9hZjA1" target="_blank" rel="noopener noreferrer" 
+         class="btn-pulse inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-lg sm:text-xl rounded-xl shadow-teleGlow border border-sky-300/30 transition-all duration-300 transform hover:-translate-y-0.5">
+        <i class="fa-brands fa-telegram text-2xl"></i>
+        <span>JOIN OFFICIAL TELEGRAM CHANNEL</span>
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+      <p class="text-xs text-slate-400 mt-2.5 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-lock text-emerald-400"></i> Free Membership • Instant Access • No Spam
+      </p>
+    </div>
+
+    <!-- What You'll Learn Inside Section -->
+    <div class="space-y-4 mb-10">
+      <div class="text-center">
+        <h3 class="heading-font text-2xl sm:text-3xl font-bold text-white mb-2">What You'll Learn Inside</h3>
+        <p class="text-xs sm:text-sm text-slate-400">Structured financial insights to build long-term market perspective</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <!-- Feature 1 -->
+        <div class="glass-card p-4 rounded-xl flex items-start space-x-3 border border-slate-800 hover:border-amber-500/30 transition">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0 mt-1">
+            <i class="fa-solid fa-chart-candlestick text-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-base">Key Technical Levels</h4>
+            <p class="text-xs text-slate-400 mt-1">Daily support, resistance, and market structure analysis for Index and Key Equities.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-card p-4 rounded-xl flex items-start space-x-3 border border-slate-800 hover:border-amber-500/30 transition">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0 mt-1">
+            <i class="fa-solid fa-shield-halved text-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-base">Risk Management Rules</h4>
+            <p class="text-xs text-slate-400 mt-1">Learn essential position sizing, capital protection, and risk-reward calculation.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-card p-4 rounded-xl flex items-start space-x-3 border border-slate-800 hover:border-amber-500/30 transition">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0 mt-1">
+            <i class="fa-solid fa-newspaper text-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-base">Pre-Market Breakdown</h4>
+            <p class="text-xs text-slate-400 mt-1">Morning updates on global market trends, macro economic factors, and sector movements.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="glass-card p-4 rounded-xl flex items-start space-x-3 border border-slate-800 hover:border-amber-500/30 transition">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0 mt-1">
+            <i class="fa-solid fa-brain text-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-base">Trader Psychology</h4>
+            <p class="text-xs text-slate-400 mt-1">Develop disciplined trading habits, emotional control, and systematic execution strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Pillars / Why Choose Gautam Jha -->
+    <div class="glass-card p-6 rounded-2xl mb-10 border border-slate-800">
+      <h3 class="heading-font text-xl font-bold text-white mb-4 text-center">Core Educational Principles</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-800/80">
+          <i class="fa-solid fa-lightbulb text-amber-400 text-xl mb-2"></i>
+          <h4 class="text-sm font-semibold text-white">No Advisory Claims</h4>
+          <p class="text-[11px] text-slate-400 mt-1">100% focused on chart analysis and conceptual market education.</p>
+        </div>
+        <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-800/80">
+          <i class="fa-solid fa-book-open text-amber-400 text-xl mb-2"></i>
+          <h4 class="text-sm font-semibold text-white">Structured Study</h4>
+          <p class="text-[11px] text-slate-400 mt-1">Case studies of historical chart patterns and price behavior.</p>
+        </div>
+        <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-800/80">
+          <i class="fa-solid fa-users text-amber-400 text-xl mb-2"></i>
+          <h4 class="text-sm font-semibold text-white">Community Focus</h4>
+          <p class="text-[11px] text-slate-400 mt-1">Interact with like-minded traders discussing price structures.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compliance / SEBI Notice Banner (Meta Ad Friendly) -->
+    <div class="bg-slate-900/90 border border-amber-500/30 rounded-xl p-4 text-xs text-slate-400 space-y-2 mb-8">
+      <div class="flex items-center gap-2 text-amber-400 font-semibold text-xs">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>IMPORTANT COMPLIANCE & DISCLAIMER NOTICE</span>
+      </div>
+      <p class="leading-relaxed">
+        <strong>GAUTAM JHA</strong> provides stock market information strictly for educational and informational purposes. We are <strong>NOT</strong> a SEBI-registered investment advisor or portfolio management service.
+      </p>
+      <p class="leading-relaxed">
+        Trading in financial markets (Equities, Derivatives, Options) carries substantial risk. We do not provide tip-based services, guaranteed profit schemes, or personalized advisory. Please consult a qualified SEBI-registered financial advisor before making real investments.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-8 px-4 text-slate-500 text-xs text-center">
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div class="flex items-center justify-center space-x-2">
+        <img src="https://iili.io/njmJCss.jpg" alt="Logo" class="w-6 h-6 rounded-full border border-amber-500/40">
+        <span class="heading-font font-bold text-slate-300">GAUTAM JHA</span>
+      </div>
+      
+      <p class="max-w-xl mx-auto text-[11px] leading-relaxed text-slate-500">
+        This site is not part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Meta in any way. FACEBOOK is a trademark of META Platforms, Inc.
+      </p>
+
+      <!-- Legal Links -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400 pt-2 border-t border-slate-900">
+        <button onclick="openModal('privacyModal')" class="hover:text-amber-400 transition">Privacy Policy</button>
+        <span>•</span>
+        <button onclick="openModal('termsModal')" class="hover:text-amber-400 transition">Terms of Service</button>
+        <span>•</span>
+        <button onclick="openModal('disclaimerModal')" class="hover:text-amber-400 transition">SEBI Disclaimer</button>
+      </div>
+
+      <p class="text-[11px] text-slate-600">
+        &copy; <script>document.write(new Date().getFullYear())</script> GAUTAM JHA. All Rights Reserved.
+      </p>
+
+      <!-- Agency Credit Link -->
+      <div class="pt-4 border-t border-slate-900/80 flex justify-center">
+        <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-amber-400 hover:border-amber-500/40 transition-all text-[11px]">
+          <i class="fa-solid fa-rectangle-ad text-amber-500"></i>
+          <span>Ads By <strong class="text-slate-200 hover:text-amber-400">AD BUILD AGENCY</strong></span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals for Meta Compliance -->
+  <!-- Privacy Modal -->
+  <div id="privacyModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 text-slate-300 text-xs space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="font-bold text-white text-base">Privacy Policy</h3>
+        <button onclick="closeModal('privacyModal')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <p>Your privacy is important to us. We do not collect or store personal identifiable information on this page without explicit consent.</p>
+      <p>We do not sell or share user data with third parties. Any link clicked leads directly to external educational channels on Telegram where users voluntarily join.</p>
+    </div>
   </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
-
-  <a href="https://t.me/+mc6hSYTJFoU0MmRl" class="telegram-btn">JOIN TELEGRAM</a>
-
-  <p class="hindi-quote">     ,     </p>
-
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+  <!-- Terms Modal -->
+  <div id="termsModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 text-slate-300 text-xs space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="font-bold text-white text-base">Terms of Service</h3>
+        <button onclick="closeModal('termsModal')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <p>By using this website, you agree that all contents provided by GAUTAM JHA are purely educational.</p>
+      <p>Past market behavior or performance discussed in studies does not guarantee future results. Users are solely responsible for their financial decisions.</p>
+    </div>
   </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
+  <!-- Disclaimer Modal -->
+  <div id="disclaimerModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 text-slate-300 text-xs space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="font-bold text-white text-base">SEBI Compliance Disclaimer</h3>
+        <button onclick="closeModal('disclaimerModal')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <p>GAUTAM JHA is an independent stock market analyst and educator. We are NOT registered with SEBI under Investment Advisers Regulations.</p>
+      <p>No material shared should be construed as investment or trading advice. Stock trading carries financial risk. Always consult a certified financial advisor before investing.</p>
+    </div>
   </div>
-</div>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2552096918611818');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2552096918611818&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
+
 </body>
 </html>
